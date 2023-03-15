@@ -32,7 +32,118 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
+}
+
+.search {
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.element {
+  width: 320px;
+  height: 270px;
+  margin: 15px 0;
+  padding: 15px;
+  border-radius: 13px;
+  background: #d7d7d7;
+}
+
+.element:hover {
+  background-color: #a9a8a8;
+  transform: scale(1.05);
+  transition-duration: 1s;
+}
+
+.element-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+}
+
+.element-name {
+  display: flex;
+  align-items: center;
+  margin: 0;
+  font-size: 27px;
+  font-weight: 700;
+  height: 77px;
+}
+
+.element-venus {
+  height: 40px;
+  margin: 0;
+  padding: 7px 0;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.element-body {
+  width: 100%;
+}
+
+.element-price-section {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.element-price-title {
+  margin-right: 10px;
+}
+
+.element-price {
+  font-weight: 600;
+}
+
+
+.element-time-section {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.element-date {
+  width: 100%;
+  font-weight: 600;
+}
+
+.element-time {
+  width: 100%;
+  font-weight: 600;
+}
+
+.element-timezone {
+  width: 100%;
+  font-weight: 600;
+}
+
+.element-other-section {
+  padding: 7px 0;
+}
+
+.element-price-title {
+  font-weight: 600;
+}
+
+.element-view {
+  width: 100%;
+  margin-top: 7px;
+}
+
+.element-view a {
+  background: #0fbd84;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: auto;
+  padding: 8px;
+  border-radius: 10px;
 }
