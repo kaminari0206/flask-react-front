@@ -31,7 +31,8 @@ function Home() {
       </div>
 
       <div className="search">
-        <div className="">
+        <div className='result-section'>
+          <label className='section-title'>TicketMaster</label>
           {data1 &&
             data1.map((row, idx) => {
               return (
@@ -40,7 +41,8 @@ function Home() {
             })
           }
         </div>
-        <div>
+        <div className='result-section'>
+          <label className='section-title'>SeatGeek</label>
           {data2 &&
             data2.map((row, idx) => {
               return (
@@ -49,7 +51,8 @@ function Home() {
             })
           }
         </div>
-        <div>
+        <div className='result-section'>
+        <label className='section-title'>Stubhub</label>
           {data3 &&
             data3.map((row, idx) => {
               return (
