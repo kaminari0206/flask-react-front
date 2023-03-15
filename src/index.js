@@ -8,6 +8,7 @@ import reportWebVitals from './reportWebVitals';
 
 import Layout from "./pages/Layout";
 import Home from "./pages/Home";
+import Search from './pages/Search';
 import { QueryClient, QueryClientProvider } from "react-query";
 const queryClient = new QueryClient();
 
@@ -19,6 +20,7 @@ root.render(
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route path="/" element={<Home />} />
+          <Route exactly path="/search" element={<Search />} />
         </Route>
       </Routes>
     </BrowserRouter>
