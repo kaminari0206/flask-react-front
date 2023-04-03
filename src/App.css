@@ -231,3 +231,7 @@ nav ul li a {
   color: white;
   cursor: pointer;
 }
+
+.MuiDateRangeCalendar-root div:first-child {
+  font-size: 0!important;
+}

@@ -10,18 +10,20 @@ import moment from 'moment';
 
 function Home() {
   const navigate = useNavigate();
-
+  let date = new Date();
+  console.log(date.getMilliseconds())
+  let initstart = moment(date).format('Y-MM-DD');
+  let initend = moment(date).format('Y-MM-DD');
   const [search, setSearch] = useState("");
   const [value, setValue] = React.useState([
-    dayjs('2022-04-17'),
-    dayjs('2022-04-21'),
+    dayjs(initstart),
+    dayjs(initend),
   ]);
 
   function handleSubmit(e) {
     let startDate=moment(value[0].$d).format('Y-MM-DD');
     let endDate=moment(value[1].$d).format('Y-MM-DD');
 
-    console.log('dddddddddd',startDate);
     e.preventDefault();
     navigate(`/search?query=${search}&startdate=${startDate}&enddate=${endDate}`);
   }
@@ -31,9 +33,9 @@ function Home() {
       <div className="search-section">
         <div className='search-part'>
           <form onSubmit={handleSubmit}>
-            <LocalizationProvider dateAdapter={AdapterDayjs} style={{"margin":"10px"}}>
+            <LocalizationProvider dateAdapter={AdapterDayjs}>
               <DemoContainer components={['DateRangePicker', 'DateRangePicker']}>
-                <DemoItem label="Select Start Date and End Date" component="DateRangePicker" style={{"textAlign":"center"}}>
+                <DemoItem label="Select Start Date and End Date" component="DateRangePicker">
                   <DateRangePicker
                     value={value}
                     onChange={(newValue) => setValue(newValue)}

@@ -1,7 +1,7 @@
-import { useState } from 'react';
+// import { useState } from 'react';
 import axios from 'axios';
 import Element from "./Element";
-import { useNavigate, useSearchParams } from 'react-router-dom';
+import { useSearchParams } from 'react-router-dom';
 import { useQuery } from 'react-query';
 
 function Search() {
