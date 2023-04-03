@@ -1,8 +1,10 @@
 // import { useState } from 'react';
 import axios from 'axios';
 import Element from "./Element";
+import BlankElement from "./BlankElement";
 import { useSearchParams } from 'react-router-dom';
 import { useQuery } from 'react-query';
+import Loading_icon from '../Loading_icon.gif';
 
 function Search() {
     const [searchParams] = useSearchParams();
@@ -16,9 +18,7 @@ function Search() {
     const { isLoading, data } = useQuery(["GETDATA", query], getData);
 
     async function getData() {
-        console.log('query', query)
-        console.log('startdate', typeof(startdate))
-        console.log('enddate', enddate)
+
         try {
             const response = await axios.get(
                 `http://127.0.0.1:5000/search?query=${query}&startdate=${startdate}&enddate=${enddate}`
@@ -36,7 +36,7 @@ function Search() {
     if (isLoading)
         return (
             <div>
-                <h1>Loading...</h1>
+                <img className="loading_icon" alt="loading" src={Loading_icon}/>
             </div>
         )
 
@@ -44,32 +44,33 @@ function Search() {
         <div className="search">
             <div className='result-section'>
                 <label className='section-title'>SeatGeek</label>
-                {data1 &&
+                
+                {data1 ? (data1 &&
                     data1.map((row, idx) => {
                         return (
                             <Element data={row} key={idx} />
                         )
-                    })
+                    })) : (<BlankElement/>)
                 }
             </div>
             <div className='result-section'>
                 <label className='section-title'>Stubhub</label>
-                {data2 &&
+                {data2 ? (data2 &&
                     data2.map((row, idx) => {
                         return (
                             <Element data={row} key={idx} />
                         )
-                    })
+                    })) : (<BlankElement/>)
                 }
             </div>
             <div className='result-section'>
                 <label className='section-title'>TicketMaster</label>
-                {data3 &&
+                {data3 ? (data3 &&
                     data3.map((row, idx) => {
                         return (
                             <Element data={row} key={idx} />
                         )
-                    })
+                    })) : (<BlankElement/>)
                 }
             </div>
         </div>

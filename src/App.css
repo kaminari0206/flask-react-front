@@ -251,3 +251,20 @@ p {
 label{
   color:#0fbd84!important;
 }
+
+.loading_icon{
+  display: block;
+  justify-content: space-between;
+  width: 200px;
+  margin:300px auto;
+}
+
+.element {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.element h3 {
+  font-size: 28px;
+}
