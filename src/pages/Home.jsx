@@ -18,8 +18,8 @@ function Home() {
   ]);
 
   function handleSubmit(e) {
-    let startDate=moment(value[0].$d).format('MM/DD/YYYY');
-    let endDate=moment(value[1].$d).format('MM/DD/YYYY');
+    let startDate=moment(value[0].$d).format('Y-MM-DD');
+    let endDate=moment(value[1].$d).format('Y-MM-DD');
 
     console.log('dddddddddd',startDate);
     e.preventDefault();

@@ -43,7 +43,7 @@ function Search() {
     return (
         <div className="search">
             <div className='result-section'>
-                <label className='section-title'>TicketMaster</label>
+                <label className='section-title'>SeatGeek</label>
                 {data1 &&
                     data1.map((row, idx) => {
                         return (
@@ -53,7 +53,7 @@ function Search() {
                 }
             </div>
             <div className='result-section'>
-                <label className='section-title'>SeatGeek</label>
+                <label className='section-title'>Stubhub</label>
                 {data2 &&
                     data2.map((row, idx) => {
                         return (
@@ -63,7 +63,7 @@ function Search() {
                 }
             </div>
             <div className='result-section'>
-                <label className='section-title'>Stubhub</label>
+                <label className='section-title'>TicketMaster</label>
                 {data3 &&
                     data3.map((row, idx) => {
                         return (
