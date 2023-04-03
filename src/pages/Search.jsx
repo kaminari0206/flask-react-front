@@ -9,12 +9,19 @@ function Search() {
 
     const query = searchParams.get("query");
 
+    const startdate = searchParams.get("startdate");
+
+    const enddate = searchParams.get("enddate");
+
     const { isLoading, data } = useQuery(["GETDATA", query], getData);
 
     async function getData() {
+        console.log('query', query)
+        console.log('startdate', typeof(startdate))
+        console.log('enddate', enddate)
         try {
             const response = await axios.get(
-                `http://127.0.0.1:5000/search?query=${query}`
+                `http://127.0.0.1:5000/search?query=${query}&startdate=${startdate}&enddate=${enddate}`
             );
             return response.data;
         } catch (error) {
