@@ -11,7 +11,6 @@ import moment from 'moment';
 function Home() {
   const navigate = useNavigate();
   let date = new Date();
-  console.log(date.getMilliseconds())
   let initstart = moment(date).format('Y-MM-DD');
   let initend = moment(date).format('Y-MM-DD');
   const [search, setSearch] = useState("");
@@ -35,7 +34,7 @@ function Home() {
           <form onSubmit={handleSubmit}>
             <LocalizationProvider dateAdapter={AdapterDayjs}>
               <DemoContainer components={['DateRangePicker', 'DateRangePicker']}>
-                <DemoItem label="Select Start Date and End Date" component="DateRangePicker">
+                <DemoItem label="Select Start Date and End Date" component="DateRangePicker" class="demoItem">
                   <DateRangePicker
                     value={value}
                     onChange={(newValue) => setValue(newValue)}

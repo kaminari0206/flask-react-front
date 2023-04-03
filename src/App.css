@@ -235,3 +235,19 @@ nav ul li a {
 .MuiDateRangeCalendar-root div:first-child {
   font-size: 0!important;
 }
+
+.MuiInputBase-root{
+  height:40px;
+  width: 210px!important;
+  margin-bottom: 20px;
+}
+
+p {
+  color:#0fbd84!important;
+  font-size: 20px!important;
+  text-align: center!important;
+}
+
+label{
+  color:#0fbd84!important;
+}
