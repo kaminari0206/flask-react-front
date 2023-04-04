@@ -1,10 +1,10 @@
-// import { useState, useEffect } from 'react';
-// import axios from 'axios';
-// import { useNavigate } from 'react-router-dom';
-
-
 function Element(props) {
     const { data } = props
+    let len = data.name.length;
+    if (len>=50) {
+        data.name = data.name.slice(0,50)+"...";
+    }
+
     return (
         <div className="element">
             <div className='element-header'>

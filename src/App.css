@@ -259,12 +259,12 @@ label{
   margin:300px auto;
 }
 
-.element {
+.blank_element {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.element h3 {
+.blank_element h3 {
   font-size: 28px;
 }
